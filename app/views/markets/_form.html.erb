@@ -1,0 +1,57 @@
+<%= form_for(market) do |f| %>
+  <% if market.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(market.errors.count, "error") %> prohibited this market from being saved:</h2>
+
+      <ul>
+      <% market.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label '야시장 이름' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label '상세 주소' %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label '영업시간' %>
+    <%= f.text_field :open %>
+  </div>
+
+  <div class="field">
+    <%= f.label '주차 가능 여부' %>
+    <%= f.check_box :parking %>
+  </div>
+
+  <div class="field">
+    <%= f.label '전화번호' %>
+    <%= f.text_field :tel %>
+  </div>
+
+  <div class="field">
+    <%= f.label '휴일' %>
+    <%= f.text_field :closed %>
+  </div>
+
+  <div class="field">
+    <%= f.label '시/도' %>
+    <%= f.text_field :locate1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label '구/군' %>
+    <%= f.text_field :locate2 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

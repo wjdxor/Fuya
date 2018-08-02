@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @market.name %></h1>
+
+<p>
+  이미지
+</p>
+
+<p>
+  <strong>위치</strong>
+  <%= @market.address %><br>
+
+  <strong>영업시간</strong>
+  <%= @market.open %><br>
+
+  <strong>주차</strong>
+  <% if @market.parking == true %>
+    가능
+  <% else %>
+    불가
+  <% end %>
+  <br>
+
+  <strong>전화번호</strong>
+  <%= @market.tel %><br>
+
+  <strong>휴일</strong>
+  <%= @market.closed %><br>
+</p>
+
+<p>
+  가게 목록(사진이랑 설명, 없으면 요기요 대체 사진)
+</p>
+
+<p>
+  전체 후기 중 best 3개, 전체 평점
+</p>
+
+<%= link_to 'Edit', edit_market_path(@market) %> |
+<%= link_to 'Back', markets_path %>

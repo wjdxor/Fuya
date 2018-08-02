@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  open: MyString
+  parking: false
+  tel: MyString
+  closed: MyString
+  locate1: MyString
+  locate2: MyString
+  locate3: MyString
+
+two:
+  name: MyString
+  address: MyString
+  open: MyString
+  parking: false
+  tel: MyString
+  closed: MyString
+  locate1: MyString
+  locate2: MyString
+  locate3: MyString
