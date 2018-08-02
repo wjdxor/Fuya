@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180802071025) do
+ActiveRecord::Schema.define(version: 20180802170959) do
 
   create_table "markets", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,26 @@ ActiveRecord::Schema.define(version: 20180802071025) do
     t.string   "locate3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "price"
+    t.text     "content"
+    t.integer  "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_menus_on_shop_id"
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string   "name"
+    t.string   "open"
+    t.string   "tel"
+    t.integer  "market_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["market_id"], name: "index_shops_on_market_id"
   end
 
 end

@@ -2,34 +2,61 @@
 
 <h1><%= @market.name %></h1>
 
-<p>
-  이미지
-</p>
+<div class="container">
+  <p>
+    이미지
+  </p>
 
-<p>
-  <strong>위치</strong>
-  <%= @market.address %><br>
+  <p>
+    <strong>위치</strong>
+    <%= @market.address %><br>
 
-  <strong>영업시간</strong>
-  <%= @market.open %><br>
+    <strong>영업시간</strong>
+    <%= @market.open %><br>
 
-  <strong>주차</strong>
-  <% if @market.parking == true %>
-    가능
-  <% else %>
-    불가
-  <% end %>
-  <br>
+    <strong>주차</strong>
+    <% if @market.parking == true %>
+      가능
+    <% else %>
+      불가
+    <% end %>
+    <br>
 
-  <strong>전화번호</strong>
-  <%= @market.tel %><br>
+    <strong>전화번호</strong>
+    <%= @market.tel %><br>
 
-  <strong>휴일</strong>
-  <%= @market.closed %><br>
-</p>
+    <strong>휴일</strong>
+    <%= @market.closed %><br>
+  </p>
+</div>
 
 <p>
   가게 목록(사진이랑 설명, 없으면 요기요 대체 사진)
+  <table>
+    <thead>
+      <tr>
+        <th>사진</th>
+        <th>가게이름(대표메뉴)</th>
+        <th>부가설명(자유)</th>
+        <th>전화번호</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @market.shops.each do |shop| %>
+        <tr>
+          <td>사진</td>
+          <td><%= shop.name %></td>
+          <td>부가설명(자유)</td>
+          <td><%= shop.tel %></td>
+          <td><%= link_to 'Show', shop %></td>
+          <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
+          <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </p>
 
 <p>
