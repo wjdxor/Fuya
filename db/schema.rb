@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180802170959) do
+ActiveRecord::Schema.define(version: 20180802221347) do
+
+  create_table "market_reviews", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.float    "rate"
+    t.date     "date"
+    t.integer  "market_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["market_id"], name: "index_market_reviews_on_market_id"
+  end
 
   create_table "markets", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +45,17 @@ ActiveRecord::Schema.define(version: 20180802170959) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_menus_on_shop_id"
+  end
+
+  create_table "shop_reviews", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.float    "rate"
+    t.date     "date"
+    t.integer  "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_shop_reviews_on_shop_id"
   end
 
   create_table "shops", force: :cascade do |t|

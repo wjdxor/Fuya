@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :shop_reviews
+  resources :market_reviews
   resources :menus
   resources :shops
   resources :markets

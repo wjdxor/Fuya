@@ -1,0 +1,2 @@
+module MarketReviewsHelper
+end

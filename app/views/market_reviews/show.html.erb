@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @market_review.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @market_review.content %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @market_review.rate %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @market_review.date %>
+</p>
+
+<%= link_to 'Edit', edit_market_review_path(@market_review) %> |
+<%= link_to 'Back', market_reviews_path %>
