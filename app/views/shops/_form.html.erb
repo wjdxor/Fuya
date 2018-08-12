@@ -13,19 +13,20 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, plaeceholder: 'ex) 푸야네 가게' %>
   </div>
 
   <div class="field">
     <%= f.label :open %>
-    <%= f.text_field :open %>
+    <%= f.text_field :open, plaeceholder: 'ex) 평일 18:00~24:00' %>
   </div>
 
   <div class="field">
     <%= f.label :tel %>
-    <%= f.text_field :tel %>
+    <%= f.text_field :tel, plaeceholder: 'ex) 010-0000-0000' %>
   </div>
 
+<%# TODO: market_id 입력하지 않아도 되도록 %>
   <div class="field">
     <%= f.label :market_id %>
     <%= f.text_field :market_id %>

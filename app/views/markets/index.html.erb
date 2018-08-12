@@ -2,8 +2,10 @@
 
 <h1>야시장-지역별(/market/locate)</h1>
 
+<%# TODO: 지도 api 추가하기 %>
 <p>지도 api</p>
 
+<%# TODO: 지역 검색 부분 추가하기 %>
 <p>지역 검색 부분</p>
 
 <table>
@@ -26,9 +28,9 @@
         <td><%= market.name %></td>
         <td><%= market.address %></td>
         <td><%= market.tel %></td>
-        <td><%= link_to 'Show', market %></td>
-        <td><%= link_to 'Edit', edit_market_path(market) %></td>
-        <td><%= link_to 'Destroy', market, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '보기', market %></td>
+        <td><%= link_to '수정', edit_market_path(market) %></td>
+        <td><%= link_to '삭제', market, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Market', new_market_path %>
+<%= link_to '새 야시장 추가하기', new_market_path %>

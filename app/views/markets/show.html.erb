@@ -31,8 +31,8 @@
   <strong>휴일</strong>
   <%= @market.closed %><br>
 
-  <%= link_to 'Edit', edit_market_path(@market) %> |
-  <%= link_to 'Back', markets_path %>
+  <%= link_to '수정', edit_market_path(@market) %> |
+  <%= link_to '뒤로', markets_path %>
 </p>
 
 ---------------------- 가게 목록 칸 ----------------------
@@ -44,7 +44,7 @@
         <th>가게이름(대표메뉴)</th>
         <th>부가설명(자유)</th>
         <th>전화번호</th>
-        <th><%= link_to 'New', new_shop_path %></th>
+        <th><%= link_to '새 가게 만들기', new_shop_path %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -56,9 +56,9 @@
           <td><%= shop.name %></td>
           <td>부가설명(자유)</td>
           <td><%= shop.tel %></td>
-          <td><%= link_to 'Show', shop %></td>
-          <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
-          <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '보기', shop %></td>
+          <td><%= link_to '수정', edit_shop_path(shop) %></td>
+          <td><%= link_to '삭제', shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -74,7 +74,7 @@
         <th>내용</th>
         <th>별점</th>
         <th>날짜</th>
-        <th><%= link_to 'New', new_shop_review_path %></th>
+        <th><%= link_to '새 리뷰 쓰기', new_shop_review_path %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -86,9 +86,9 @@
           <td><%= market_review.content %></td>
           <td><%= market_review.rate %></td>
           <td><%= market_review.date %></td>
-          <td><%= link_to 'Show', market_review %></td>
-          <td><%= link_to 'Edit', edit_market_review_path(market_review) %></td>
-          <td><%= link_to 'Destroy', market_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '보기', market_review %></td>
+          <td><%= link_to '수정', edit_market_review_path(market_review) %></td>
+          <td><%= link_to '삭제', market_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>

@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= f.label '야시장 이름' %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder:"ex) 여의도 월드나이트마켓" %>
   </div>
 
   <div class="field">
     <%= f.label '상세 주소' %>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, placeholder:"ex) 서울시 영등포구 여의동로 330 여의도한강공원 물빛광장" %>
   </div>
 
   <div class="field">
     <%= f.label '영업시간' %>
-    <%= f.text_field :open %>
+    <%= f.text_field :open, placeholder:"ex) 매주 금,토 18:00~23:00" %>
   </div>
 
   <div class="field">
@@ -33,22 +33,23 @@
 
   <div class="field">
     <%= f.label '전화번호' %>
-    <%= f.text_field :tel %>
+    <%= f.text_field :tel, placeholder:"ex) 02-000-0000" %>
   </div>
 
   <div class="field">
     <%= f.label '휴일' %>
-    <%= f.text_field :closed %>
+    <%= f.text_field :closed, placeholder:"ex) 영업 시간 제외" %>
   </div>
 
+  <%# TODO: 자동 입력 되게 %>
   <div class="field">
     <%= f.label '시/도' %>
-    <%= f.text_field :locate1 %>
+    <%= f.text_field :locate1, placeholder:"ex) 서울시" %>
   </div>
 
   <div class="field">
     <%= f.label '구/군' %>
-    <%= f.text_field :locate2 %>
+    <%= f.text_field :locate2, placeholder:"ex) 영등포구" %>
   </div>
 
   <div class="actions">
